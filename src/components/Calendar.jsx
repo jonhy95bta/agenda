@@ -21,8 +21,9 @@ const services = [
     { name: "Depilacion Completa", detail: "Jornada Completa", price: 30000 },
     { name: "Depilacion Semi", detail: "Jornada Semi-completa", price: 15000 },
     { name: "Exilis", detail: "Maquina 30 min", price: 3000 }
-
+    
 ];
+console.log("Servicios cargados:", services);
 
 const CalendarComponent = () => {
     const [events, setEvents] = useState([]);
