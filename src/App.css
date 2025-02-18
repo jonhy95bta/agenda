@@ -3,12 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  color-scheme: light;
+  color-scheme: light; /* Forzar el tema claro */
 }
 
+/* Para el body */
 body {
   background-color: white !important;
   color: black !important;
+  color-scheme: light; /* Forzar el tema claro */
 }
 
 /* src/App.css */
