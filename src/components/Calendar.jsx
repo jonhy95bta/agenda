@@ -4,6 +4,7 @@ import "react-calendar/dist/Calendar.css";
 import { format, startOfWeek, addDays, isWithinInterval } from "date-fns";
 import { es } from "date-fns/locale";
 import styles from './Calendar.module.css';
+import '../App.css';
 
 // Importamos las funciones de Firestore y la instancia de la base de datos desde nuestro archivo de configuración
 import { collection, addDoc, onSnapshot, deleteDoc, doc } from "firebase/firestore";
