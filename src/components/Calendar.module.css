@@ -1,0 +1,248 @@
+/* src/Calendar.module.css */
+
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.eventDay {
+  background-color: #ffccdc; /* Un tono rosa suave */
+  border-radius: 30%; /* Opcional: para que se vea más estilizado */
+}
+
+.eventDay:hover {
+  background-color: #ff99bb !important; /* Un poco más oscuro al pasar el mouse */
+}
+
+.eventItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffc0cb; /* Color rosa suave */
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.eventItem button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.reactCalendar {
+  width: 100%;
+  font-size: 1rem; /* Tamaño de fuente ajustado */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.react-calendar__navigation__label {
+  text-transform: uppercase !important;
+  font-weight: bold;
+}
+
+/* Cambiar los nombres de los días a mayúsculas */
+.react-calendar__month-view__weekdays__weekday {
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase; /* Mayúsculas para los días de la semana */
+}
+
+/* Estilo de los días de la semana */
+.react-calendar__month-view__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+/* Estilo de los días */
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.react-calendar__month-view__days__day {
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.react-calendar__month-view__days__day:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* Cambiar color de los fines de semana a rojo */
+.react-calendar__month-view__days__day--weekend {
+  color: #ff6347; /* Rojo para fines de semana */
+}
+
+.react-calendar__month-view__days__day--weekend:hover {
+  background-color: #f8d7da; /* Color de fondo cuando pasa el mouse por encima */
+}
+
+/* Resaltar los días con eventos */
+.react-calendar__month-view__days__day.eventDay {
+  background-color: #ffeb3b; /* Amarillo para los días con eventos */
+  border-radius: 50%;
+  color: #000;
+}
+
+/* Estilo para el formulario de agregar eventos */
+.eventForm {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.eventForm input {
+  width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.eventForm button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.eventForm button:hover {
+  background-color: #45a049;
+}
+
+.eventsList {
+  margin-top: 20px;
+}
+
+.eventsList h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.eventsList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.eventsList li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .reactCalendar {
+    width: 25rem;
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    font-size: 0.8rem; /* Ajustamos el tamaño de la fuente en pantallas pequeñas */
+    max-width: 34.375rem;
+  }
+  
+  .react-calendar__month-view__days__day {
+    font-size: 1rem; /* Reducimos el tamaño de la fuente en pantallas pequeñas */
+    padding: 8px; /* Reducimos el padding para que encaje mejor */
+    max-width: 34.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .reactCalendar {
+    width: 25rem;
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .react-calendar__month-view__weekdays__weekday {
+    font-size: 0.7rem; /* Font-size más pequeño en pantallas aún más pequeñas */
+    max-width: 34.375rem;
+  }
+
+  .react-calendar__month-view__days__day {
+    font-size: 0.9rem; /* Font-size aún más pequeño */
+    padding: 6px; /* Menos padding */
+    max-width: 34.375rem;
+  }
+  
+}
+
+/* Estilo de los fines de semana */
+.weekend {
+  color: #ff6347; /* Rojo para fines de semana */
+}
+
+
+/* Añadir al final de Calendar.module.css */
+.totalContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilo para el select estilizado */
+.selectStyled {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Estilo para los botones de calcular total */
+.totalButton {
+  background-color: #d3d3d3; /* Gris clarito */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.totalButton:hover {
+  background-color: #c0c0c0;
+}
+
+/* Estilo para resaltar el total */
+.totalDisplay {
+  background-color: yellow;
+  border-radius: 8px;
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
