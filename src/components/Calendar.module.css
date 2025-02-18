@@ -246,3 +246,87 @@
   margin-top: 10px;
   display: inline-block;
 }
+
+
+/* MODO OSCURO/CLARO */
+
+@media (prefers-color-scheme: dark) {
+  .calendarContainer {
+    background-color: #121212; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+  }
+
+  .reactCalendar {
+    background-color: #333; /* Fondo oscuro para el calendario */
+    color: white; /* Texto blanco */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Sombra más suave para el modo oscuro */
+  }
+
+  .eventItem {
+    background-color: #444; /* Fondo oscuro para los eventos */
+    color: white; /* Texto blanco */
+  }
+
+  .eventDay {
+    background-color: #bb86fc; /* Un color claro y visible para el modo oscuro */
+  }
+
+  .eventDay:hover {
+    background-color: #6200ee !important; /* Fondo en hover más visible */
+  }
+
+  .eventItem button {
+    color: #ff4081; /* Color llamativo para los botones */
+  }
+
+  .react-calendar__navigation__label {
+    color: white !important; /* Etiqueta en blanco para los días */
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    color: #ffffff; /* Blanco para los días de la semana */
+  }
+
+  .react-calendar__month-view__days__day {
+    background-color: #333; /* Fondo oscuro para los días */
+    color: white; /* Texto blanco */
+  }
+
+  .react-calendar__month-view__days__day:hover {
+    background-color: #555; /* Hover con fondo más claro */
+  }
+
+  .react-calendar__month-view__days__day--weekend {
+    color: #ff6347; /* Color rojo para fines de semana */
+  }
+
+  .eventForm {
+    background-color: #444; /* Fondo oscuro en el formulario */
+    color: white; /* Texto blanco */
+    border: 1px solid #666; /* Borde más oscuro */
+  }
+
+  .eventForm input, .eventForm button {
+    background-color: #333; /* Fondo oscuro para inputs y botones */
+    color: white; /* Texto blanco */
+  }
+
+  .totalDisplay {
+    background-color: #6200ee; /* Fondo morado para el total */
+    color: white; /* Texto blanco */
+  }
+
+  .selectStyled {
+    background-color: #444; /* Fondo oscuro para selects */
+    color: white; /* Texto blanco */
+  }
+
+  .totalButton {
+    background-color: #555; /* Fondo más oscuro para los botones */
+    color: white; /* Texto blanco */
+  }
+
+  .totalButton:hover {
+    background-color: #333; /* Fondo más oscuro en hover */
+  }
+}
