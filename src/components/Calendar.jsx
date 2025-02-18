@@ -10,9 +10,18 @@ import { collection, addDoc, onSnapshot, deleteDoc, doc } from "firebase/firesto
 import { db } from "../firestore"; // Ajusta la ruta según la ubicación de tu archivo firebase.js
 
 const services = [
-    { name: "Masaje relajante", detail: "Masaje de 60 minutos", price: 50 },
-    { name: "Masaje descontracturante", detail: "Masaje de 90 minutos", price: 70 },
-    { name: "Terapia deportiva", detail: "Sesión enfocada en recuperación muscular", price: 60 }
+    { name: "Masajes reductores", detail: "Masaje de 30 minutos", price: 2650 },
+    { name: "Drenaje linfatico", detail: "Masaje de 60 minutos", price: 4000 },
+    { name: "Maderoterapia", detail: "Masaje de 60 minutos", price: 5040 },
+    { name: "Electrodos", detail: "Maquina para tonificar 30 min", price: 2250 },
+    { name: "Radiofrecuencia", detail: "Maquina 30/40 minutos", price: 5000 },
+    { name: "Ultracavitacion", detail: "Maquina 30 minutos", price: 2250 },
+    { name: "Truflex", detail: "Maquina 60 minutos", price: 3000 },
+    { name: "Trufat", detail: "Maquina 60 minutos", price: 3000 },
+    { name: "Depilacion Completa", detail: "Jornada Completa", price: 30000 },
+    { name: "Depilacion Semi", detail: "Jornada Semi-completa", price: 15000 },
+    { name: "Exilis", detail: "Maquina 30 min", price: 3000 }
+
 ];
 
 const CalendarComponent = () => {

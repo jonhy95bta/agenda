@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: white !important;
+  color: black !important;
+}
+
 /* src/App.css */
 .App {
   display: flex;
