@@ -1,0 +1,20 @@
+/* WeekDetail.module.css */
+.weekDetailContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.eventItem {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}

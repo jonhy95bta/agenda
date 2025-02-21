@@ -1,27 +1,26 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+  margin: 0;
   text-align: center;
 
 }
 
-body {
-  background-color: white !important;
-  color: black !important;
-}
 
-
-/* src/App.css */
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f0f0f0;
-  padding: 20px;
+  width: 100%;
+  background-color: #d5d4d4; /* Color de fondo en modo claro */
+  transition: background-color 0.3s ease;
 }
+
+.App.dark {
+  background-color: #333333; /* Color de fondo en modo oscuro */
+}
+
 
 .appTitle {
   font-size: 2.5rem;

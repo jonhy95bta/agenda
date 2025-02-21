@@ -10,6 +10,7 @@ import '../App.css';
 import { collection, addDoc, onSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../firestore"; // Ajusta la ruta según la ubicación de tu archivo firebase.js
 
+// Servicios
 const services = [
     { name: "Masajes reductores", detail: "Masaje de 30 minutos", price: 2650 },
     { name: "Drenaje linfatico", detail: "Masaje de 60 minutos", price: 4000 },
@@ -22,9 +23,7 @@ const services = [
     { name: "Depilacion Completa", detail: "Jornada Completa", price: 30000 },
     { name: "Depilacion Semi", detail: "Jornada Semi-completa", price: 15000 },
     { name: "Exilis", detail: "Maquina 30 min", price: 3000 }
-    
 ];
-console.log("Servicios cargados:", services);
 
 const CalendarComponent = () => {
     const [events, setEvents] = useState([]);
@@ -32,6 +31,7 @@ const CalendarComponent = () => {
     const [eventTitle, setEventTitle] = useState("");
     const [selectedService, setSelectedService] = useState(services[0]);
     const [total, setTotal] = useState(null);
+    const [showWeekDetail, setShowWeekDetail] = useState(false); // Para controlar la visibilidad del detalle de la semana
 
     // Cargamos los eventos desde Firestore
     useEffect(() => {
@@ -54,7 +54,6 @@ const CalendarComponent = () => {
         try {
             // Verificar si la conexión a Firestore es exitosa
             const docRef = await addDoc(collection(db, "events"), newEvent);
-
             // Actualizar estado local
             setEvents([...events, { ...newEvent, id: docRef.id }]);
             setEventTitle("");
@@ -107,6 +106,7 @@ const CalendarComponent = () => {
             .reduce((sum, event) => sum + event.service.price, 0);
 
         setTotal(totalForWeek);
+        setShowWeekDetail(prevState => !prevState); // Alterna la visibilidad del detalle de la semana
     };
 
     return (
@@ -177,6 +177,27 @@ const CalendarComponent = () => {
                     <p className={styles.totalDisplay}>Total: ${total}</p>
                 )}
             </div>
+
+            {/* Mostrar el detalle de la semana solo cuando se calcule */}
+            {showWeekDetail && (
+                <div className={styles.weekDetail}>
+                    <h3>Resumen de la Semana (Lunes a Viernes)</h3>
+                    <ul>
+                        {events
+                            .filter(event => {
+                                const monday = startOfWeek(date, { weekStartsOn: 1 });
+                                const friday = addDays(monday, 4);
+                                const eventDate = new Date(event.date);
+                                return isWithinInterval(eventDate, { start: monday, end: friday });
+                            })
+                            .map((event, index) => (
+                                <li key={index}>
+                                    {event.title} - {event.service.name} (${event.service.price})
+                                </li>
+                            ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };

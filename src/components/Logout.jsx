@@ -12,7 +12,9 @@ const Logout = () => {
         }
     };
 
-    return <button onClick={handleLogout}>Cerrar sesión</button>;
+    return <div>
+        <button onClick={handleLogout}>Cerrar sesión</button>
+    </div>;
 };
 
 export default Logout;

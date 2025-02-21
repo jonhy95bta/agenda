@@ -219,12 +219,12 @@
   border-radius: 5px;
   font-size: 1rem;
   background-color: #fff;
-  margin-right: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
 .totalButton {
-  background-color: #d3d3d3;
+  background-color: #45a049;
   border: none;
   border-radius: 5px;
   padding: 8px 12px;
