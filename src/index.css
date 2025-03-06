@@ -31,6 +31,7 @@ h1 {
   line-height: 1.1;
 }
 
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -63,6 +64,13 @@ body.dark {
   
   color: rgba(255, 255, 255, 0.87);
 }
+body.dark ul {
+  color: #000000;
+}
+body.dark h4 {
+  color: #000000;
+}
+
 
 .react-calendar__month-view__weekdays,
 .react-calendar__month-view__days {

@@ -31,7 +31,7 @@ const App = () => {
         {darkMode ? <FaSun /> : <FaMoon />}
       </button>
 
-      <h1 className="appTitle">¡Bienvenido a la Agenda de Turnos!</h1>
+      <h1 className="appTitle">¡Bienvenida a la mas Linda!</h1>
 
       {!user ? (
         <Login />

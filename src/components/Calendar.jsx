@@ -180,14 +180,15 @@ const CalendarComponent = () => {
 
             {/* Mostrar el detalle de la semana solo cuando se calcule */}
             {showWeekDetail && (
-                <div className={styles.weekDetail}>
-                    <h3>Resumen de la Semana (Lunes a Viernes)</h3>
+                <div className={`${styles.weekDetail} ${showWeekDetail ? styles.show : ''}`}>
+                    <h4>Resumen de la Semana (Lunes a Viernes)</h4>
                     <ul>
                         {events
                             .filter(event => {
                                 const monday = startOfWeek(date, { weekStartsOn: 1 });
                                 const friday = addDays(monday, 4);
                                 const eventDate = new Date(event.date);
+                                
                                 return isWithinInterval(eventDate, { start: monday, end: friday });
                             })
                             .map((event, index) => (
