@@ -45,6 +45,7 @@ button {
   gap: 1rem;
 }
 
+
 button:hover {
   border-color: #646cff;
 }
@@ -102,4 +103,6 @@ body.dark .react-calendar__month-view__days {
   button {
     background-color: #f9f9f9;
   }
+  
+
 }

@@ -1,104 +1,7 @@
 /* Calendar.module.css */
 
-.calendarContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
 
-}
 
-.eventDay {
-  background-color: #ffccdc; /* Un tono rosa suave */
-  border-radius: 30%;
-}
-
-.eventDay:hover {
-  background-color: #ff99bb !important;
-}
-
-.eventItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffc0cb;
-  border-radius: 10px;
-  padding: 8px 12px;
-  margin: 5px 0;
-  font-size: 1rem;
-}
-
-.eventItem button {
-  background: none;
-  border: none;
-  color: red;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.reactCalendar {
-  width: 100%;
-  font-size: 1rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.react-calendar__navigation__label {
-  text-transform: uppercase !important;
-  font-weight: bold;
-}
-
-.react-calendar__month-view__weekdays__weekday {
-  font-weight: bold;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-.react-calendar__month-view__weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  text-align: center;
-}
-
-.react-calendar__month-view__days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-}
-
-.react-calendar__month-view__days__day {
-  padding: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
-}
-
-.react-calendar__month-view__days__day:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
-}
-
-.react-calendar__month-view__days__day--weekend {
-  color: #ff6347; /* Rojo para fines de semana */
-}
-
-.react-calendar__month-view__days__day--weekend:hover {
-  background-color: #f8d7da;
-}
-
-.react-calendar__month-view__days__day.eventDay {
-  background-color: #ffeb3b;
-  border-radius: 50%;
-  color: #000;
-}
 
 .eventForm {
   margin-top: 20px;
@@ -154,59 +57,6 @@
   margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-  .reactCalendar {
-    width: 100%;
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  .react-calendar__month-view__weekdays__weekday {
-    font-size: 0.9rem;
-  }
-
-  .react-calendar__month-view__days__day {
-    font-size: 1rem;
-    padding: 8px;
-  }
-
-  .eventForm {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .eventsList {
-    width: 100%;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .reactCalendar {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
-  .react-calendar__month-view__weekdays__weekday {
-    font-size: 0.8rem;
-  }
-
-  .react-calendar__month-view__days__day {
-    font-size: 0.9rem;
-    padding: 6px;
-  }
-
-  .eventForm {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .eventsList {
-    width: 100%;
-    padding: 5px;
-  }
-}
 
 .totalContainer {
   margin-top: 20px;
@@ -313,4 +163,20 @@
 .weekDetail.show {
   max-height: 500px;  /* Ajusta según el contenido */
   padding: 10px;  /* Se agrega suavemente */
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 480px) {
+  .weekDetail {
+    width: auto;
+    max-height: 300px; /* Ajusta según lo necesario */
+    overflow-y: auto; /* Permite scroll si hay demasiado contenido */
+  }
 }
