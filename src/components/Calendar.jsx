@@ -13,12 +13,12 @@ import { db } from "../firestore"; // Ajusta la ruta según la ubicación de tu 
 
 // Servicios
 const services = [
-    { name: "Masajes reductores", detail: "Masaje de 30 minutos", price: 2650 },
-    { name: "Drenaje linfatico", detail: "Masaje de 60 minutos", price: 4000 },
-    { name: "Maderoterapia", detail: "Masaje de 60 minutos", price: 5040 },
-    { name: "Electrodos", detail: "Maquina para tonificar 30 min", price: 2250 },
+    { name: "Masajes reductores", detail: "Masaje de 30 minutos", price: 4463 },
+    { name: "Drenaje linfatico", detail: "Masaje de 60 minutos", price: 7450 },
+    { name: "Maderoterapia", detail: "Masaje de 60 minutos", price: 7450 },
+    { name: "Electrodos", detail: "Maquina para tonificar 30 min", price: 3825 },
     { name: "Radiofrecuencia", detail: "Maquina 30/40 minutos", price: 5000 },
-    { name: "Ultracavitacion", detail: "Maquina 30 minutos", price: 2250 },
+    { name: "Ultracavitacion", detail: "Maquina 30 minutos", price: 6375 },
     { name: "Truflex", detail: "Maquina 60 minutos", price: 3000 },
     { name: "Trufat", detail: "Maquina 60 minutos", price: 3000 },
     { name: "Depilacion Completa", detail: "Jornada Completa", price: 30000 },

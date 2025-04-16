@@ -2,8 +2,10 @@
 
   margin: 0;
   text-align: center;
-
+  
 }
+
+
   header {
     width: 100%;
     display: flex;
@@ -25,11 +27,22 @@
     gap: 1rem;
   }
   @media (prefers-color-scheme: light) {
+
   .userAdmin {
     background-color: #f9f9f9;
     color: #000;
   }
+
 }
+@media (prefers-color-scheme: dark) {
+
+  .userAdmin {
+    background-color: #f9f9f9;
+    color: #000;
+  }
+
+}
+
 
 .App {
   display: flex;
